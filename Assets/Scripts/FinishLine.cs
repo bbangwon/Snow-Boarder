@@ -13,7 +13,8 @@ public class FinishLine : MonoBehaviour
         if (collision.tag == "Player")
         {
             finishEffect.Play();
-            Invoke("ReloadScene", loadDelay);
+            GetComponent<AudioSource>().Play();
+            Invoke(nameof(ReloadScene), loadDelay);
         }
     }
 
